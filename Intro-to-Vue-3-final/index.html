@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Vue Harry Potter</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+
+  </head>
+
+  <body>
+
+    <div id="app">
+
+      <div class="nav-bar"></div>
+
+      <div class="shoppingCart">
+        <p>ShoppingCart({{ cart.length }})</p>
+      </div>
+
+      <product-display
+        :premium="premium"
+        @add-to-cart="updateCart"
+      ></product-display>
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="./components/ProductDisplay.js"></script>
+    <script src="./components/ReviewForm.js"></script>
+    <script src="./components/ReviewList.js"></script>
+
+    <script>
+      app.mount('#app')
+    </script>
+
+    <footer>
+      <p>
+        ILAC & EFREI Partnership- HTML, CSS, and JavaScript Vue Lab-work - REVERSAT NATHAN, SANJIVY DORIAN, PARMENTIER HUGO
+      </p>
+    </footer>
+
+  </body>
+
+</html>
